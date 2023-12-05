@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" href="gamepad-solid.svg" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <title>Hit~Marbles</title>
+</head>
+<body>
+    <div class="music-container">
+      <a href="#" id="bgmbtn" onclick="toggleBGM()"><img id="musicicon" src="music_off.png" alt="music_off"></a>
+      <a href="#" id="soundbtn" onclick="toggleSound()"><i class="fa-solid fa-volume-xmark"></i></a>
+      <audio id="bgm" src="BGM1.mp3" loop style="display: none;"></audio>
+      <audio id="rightsound" src="Right-Sound.mp3" style="display: none;"></audio>
+      <audio id="wrongsound" src="Wrong-Sound.mp3" style="display: none;"></audio>
+      <audio id="startsound" src="Start-Sound.mp3" style="display: none;"></audio>
+      <audio id="gameoversound" src="Gameover-Sound.mp3" style="display: none;"></audio>
+    </div>
+    <div class="container">
+      <div class="start-overlay">
+        <div class="sub-container">
+          <h1 class="gametitle">H!t ` M@rbles</h1>
+          <a href="#" class="startbtn">Start Game!</a>
+        </div>
+      </div>
+      <div class="end-overlay">
+        <div class="gameover">
+          <h1 id="overmsg">GAME OVER</h1>
+          <h2 id="score">Your Score : <span  id="digit">0</span></h2>
+          <a href="#" class="endbtn">Play Again!</a>
+        </div>
+      </div>
+      <div class="paneltop">
+        <div class="container-1">
+          <div class="box1">
+            <h2>Press</h2>
+            <p id="pressvalue">5</p>
+          </div>
+          <div class="box1">
+            <h2>Timer</h2>
+            <p id="timervalue">60</p>
+          </div>
+          <div class="box1">
+            <h2>Score</h2>
+            <p id="scorevalue">0</p>
+          </div>
+        </div>
+        <div class="container-2">
+          <div class="box2">
+            <h2>Wrong Attempts</h2>
+            <div class="cross-container">
+              <i id="cross1" class="fa fa-times"></i>
+              <i id="cross2" class="fa fa-times"></i>
+              <i id="cross3" class="fa fa-times"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="panelbottom">
+      </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
